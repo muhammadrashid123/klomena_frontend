@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to your favicon.ico -->
+    <link rel="icon" href="{% static 'core/images/k_image.jpeg' %}" type="image/x-icon">
+
+    <!-- For modern browsers -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'core/images/k_image.jpeg' %}">
+
+    <!-- For IE -->
+    <link rel="shortcut icon" href="{% static 'core/images/k_image.jpeg' %}" type="image/x-icon">
+    <title>Klomena</title>
+
+    <!-- Link to your static logo file -->
+    <link rel="stylesheet" href="{% static 'core/images/logo.jpeg' %}">
+    
+    <!-- Add any other CSS styles as needed -->
+   <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; /* Optional background color */
+        }
+
+        .watermark {
+            position: absolute;
+            opacity: 0.3; /* Adjust the opacity as needed */
+            pointer-events: none; /* Ensure the watermark does not interfere with mouse events on the content */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Your content goes here -->
+
+    <!-- Add the logo as a watermark -->
+    <img src="{% static 'core/images/logo.jpeg' %}" alt="Logo" class="watermark">
+
+</body>
+</html>
